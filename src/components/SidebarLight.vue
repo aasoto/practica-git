@@ -1,7 +1,9 @@
 <script setup>
+defineProps(['showSidebar']);
+
 </script>
 <template>
-  <aside class="w-1/4 z-20 fixed top-5 h-screen bg-white mx-4 mb-4 py-4 px-6 rounded-lg shadow-xl border-t-4 border-blue-800">
+  <aside :class="`animate__animated ${ showSidebar ? 'animate__slideInLeft' : 'animate__slideOutLeft'} w-1/4 z-30 fixed top-5 h-screen bg-white mx-4 mb-4 py-4 px-6 rounded-lg shadow-xl border-t-4 border-blue-800`">
     <div class="flex flex-col gap-5">
       <h1 class="text-2xl font-bold text-center">The Weather App</h1>
       <hr class="border border-black">

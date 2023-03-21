@@ -6,7 +6,7 @@ const emit = defineEmits(['switchSidebar']);
 </script>
 
 <template>
-  <nav :class="`${ showSidebar ? 'ml-[370px] w-[70vw]' : 'w-[97vw]' } z-20 fixed top-5 bg-white mx-4 px-10 py-4 rounded-full shadow-lg`">
+  <nav :class="`animate__animated ${ showSidebar ? 'animate__slideInLeft ml-[370px] w-[70vw]' : 'animate__slideInRight w-[97vw]' } z-20 fixed top-5 bg-white mx-4 px-10 py-4 rounded-full shadow-lg transition duration-200`">
     <div class="grid grid-cols-3 gap-5">
       <div class="col-span-2 flex justify-start items-center gap-5">
         <div @click="emit('switchSidebar')" class="p-1 bg-transparent hover:bg-gray-100 rounded-md cursor-pointer transition duration-200">

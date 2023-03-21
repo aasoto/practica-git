@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <SidebarLight :class="showSidebar ? 'block' : 'hidden'"/>
+  <SidebarLight :showSidebar="showSidebar" :class="showSidebar ? 'block' : 'hidden'"/>
   <NavbarLight :showSidebar="showSidebar" @switchSidebar="switchSidebar"/>
   <ContentApp :showSidebar="showSidebar"/>
 </template>
