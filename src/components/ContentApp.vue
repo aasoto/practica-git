@@ -1,8 +1,9 @@
 <script setup>
+defineProps(['showSidebar']);
 </script>
 
 <template>
-  <section class="p-5 flex flex-col gap-5">
+  <section :class="`${ showSidebar ? 'ml-[370px] w-[70vw]' : 'w-full' } mt-20 p-5 flex flex-col gap-5`">
     <div class="bg-white shadow rounded-lg border-t-4 border-blue-800 w-full">
       <div class="px-10 py-4 border-b border-black">
         <h2 class="text-xl font-bold">New York City</h2>

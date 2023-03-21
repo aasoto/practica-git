@@ -1,11 +1,15 @@
 <script setup>
+defineProps(['showSidebar']);
+
+const emit = defineEmits(['switchSidebar']);
+
 </script>
 
 <template>
-  <nav class="z-20 fixed top-5 w-[98vw] bg-white mx-4 px-10 py-4 rounded-full shadow-lg">
+  <nav :class="`${ showSidebar ? 'ml-[370px] w-[70vw]' : 'w-[97vw]' } z-20 fixed top-5 bg-white mx-4 px-10 py-4 rounded-full shadow-lg`">
     <div class="grid grid-cols-3 gap-5">
       <div class="col-span-2 flex justify-start items-center gap-5">
-        <div class="p-1 bg-transparent hover:bg-gray-100 rounded-md cursor-pointer transition duration-200">
+        <div @click="emit('switchSidebar')" class="p-1 bg-transparent hover:bg-gray-100 rounded-md cursor-pointer transition duration-200">
           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
