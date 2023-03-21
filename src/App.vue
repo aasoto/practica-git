@@ -1,8 +1,8 @@
 <script setup>
-
+  import NavbarLight from "./components/NavbarLight.vue";
 </script>
 
 <template>
-<h1 class="text-3xl font-bold underline">APP PRACTICA DE GITHUB</h1>
+  <NavbarLight/>
 </template>
 
