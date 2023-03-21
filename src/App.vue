@@ -1,8 +1,8 @@
 <script setup>
-
+  import SidebarLight from "./components/SidebarLight.vue";
 </script>
 
 <template>
-<h1 class="text-3xl font-bold underline">APP PRACTICA DE GITHUB</h1>
+  <SidebarLight/>
 </template>
 
