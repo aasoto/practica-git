@@ -1,8 +1,20 @@
 <script setup>
+  import { ref } from "vue";
 
+  import ContentApp from "./components/ContentApp.vue";
+  import NavbarLight from "./components/NavbarLight.vue";
+  import SidebarLight from "./components/SidebarLight.vue";
+
+  const showSidebar = ref(false);
+
+  const switchSidebar = () => {
+    showSidebar.value = !showSidebar.value;
+  }
 </script>
 
 <template>
-<h1 class="text-3xl font-bold underline">APP PRACTICA DE GITHUB</h1>
+  <SidebarLight :showSidebar="showSidebar" :class="showSidebar ? 'block' : 'hidden'"/>
+  <NavbarLight :showSidebar="showSidebar" @switchSidebar="switchSidebar"/>
+  <ContentApp :showSidebar="showSidebar"/>
 </template>
 
